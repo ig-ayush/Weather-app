@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="continer">
+      
+      <!-- Search  -->
+      <div class="search-con">
+        <div class="change-icons">
+          <i class=""></i>
+        </div>
+        <input type="text" id="text" placeholder="Enter city name" />
+        <button class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Weaather Temparature -->
+        <div class="weather">
+            <div class="weather-temp">
+              <center>
+                <img src="./images/clear.png" alt="clear-weather" id="weather" />
+                <h1 id="temp">0<span> °C</span></h1>
+                <h3 id="city-name">City</h3>
+              </center>
+            </div>
+            <br />
+
+            <!-- Humidity & speed -->
+            <div class="other-info">
+              <div class="humidity">
+                <img src="./images/humidity.png" alt="Humidity" id="hum" />
+                <div class="info">
+                  <p id="humidity">20%</p>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="speed">
+                <img src="./images/wind.png" alt="Humidity" id="speed" />
+                <div class="info">
+                  <p id="speedD">20 km/h</p>
+                  <p>speed</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="error">
+        <img src="./images/404.png" alt="Erroe" id="404">
+        <h3>Location not found!!</h3>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

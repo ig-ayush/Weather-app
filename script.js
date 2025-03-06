@@ -79,5 +79,4 @@ function updateWeatherData(data) {
     }, 10);
 }
 
-
 search.addEventListener("click", CheakWeather);

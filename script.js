@@ -19,11 +19,10 @@ async function CheakWeather() {
     if (response.status == 404) {
         console.log("Error: Location not found!");
         
-        // Hide weather display when error occurs
+       
         displayW.style.display = "none";
         displayW.classList.remove("show");
-
-        // Show error message smoothly
+ 
         error.style.display = "block";
         setTimeout(() => {
             error.classList.add("show");
@@ -32,12 +31,11 @@ async function CheakWeather() {
         error.classList.remove("show");
         setTimeout(() => {
             error.style.display = "none";
-        }, 400); // Hide error smoothly
-
+        }, 400); 
         const data = await response.json();
         console.log(data);
 
-        // Hide error message and update weather info smoothly
+        
         error.style.display = "none";
 
         if (displayW.classList.contains("show")) {
@@ -51,9 +49,9 @@ async function CheakWeather() {
     }
 }
 
-// Function to update weather details smoothly
+
 function updateWeatherData(data) {
-    // Update Weather Image
+  
     if (data.weather[0].main == "Clouds") {
         image.src = "./images/clouds.png";
     } else if (data.weather[0].main == "Clear") {
@@ -73,7 +71,7 @@ function updateWeatherData(data) {
     hum.innerText = `${data.main.humidity} %`;
     speed.innerText = `${Math.round(data.wind.speed)} km/h`;
 
-    // Show the weather smoothly
+  
     displayW.classList.remove("animate-out");
     displayW.style.display = "block";
     setTimeout(() => {
@@ -81,5 +79,5 @@ function updateWeatherData(data) {
     }, 10);
 }
 
-// Event listener for search button
+
 search.addEventListener("click", CheakWeather);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -126,3 +127,193 @@ span{
 .error{
     display: none;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/background-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.continer{
+    position: relative;
+    padding: 15px;
+    width: 350px;
+    height: max-content;
+    box-shadow: 0 4px 30px rgba(0, 0, 0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Search */
+.search-con{
+    border: 1.5px solid ;
+    padding: 8px;
+    border-radius: 7px;
+    display: flex;
+}
+.change-icons i{
+    font-size: 0.9rem;
+}
+.change-icons{
+    padding: 5px;
+}
+i{
+    color: black;
+}
+input{
+    padding: 5px;
+    margin-right: 5px;
+    border: none ;
+    outline: none;
+    background-color: transparent;
+}
+input::placeholder{
+    font-weight: bold;
+}
+
+button{
+    padding: 5px;
+    border: none;
+    background-color: white;
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+/* Weather TEmparature */
+img{
+    width: 190px;
+}
+h1{
+    position: relative;
+}
+span{
+    position: absolute;
+    font-size: 1.1rem ;
+}
+
+/* Humidity & speed */
+
+.humidity img{
+    width: 50px;
+}
+.speed img{
+    width:  50px;
+}
+
+.other-info{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 20px;
+}
+.humidity{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+}
+.speed{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+}
+
+.weather {
+    display: none;
+}
+.show{
+    display: block;
+}
+.error{
+    display: none;
+}
+/* Weather Section */
+.weather {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.weather.animate-out {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Humidity & Wind Speed */
+.other-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.humidity, .speed {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.humidity img, .speed img {
+    width: 50px;
+}
+
+/* Error Message */
+.error {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.error.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+>>>>>>> 0de305e (weather app)
